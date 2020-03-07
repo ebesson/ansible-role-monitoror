@@ -1,0 +1,27 @@
+# Ansible Role: monitoror
+
+[#img-build-status]
+[link=https://github.com/ebesson/ansible-role-monitoror]
+image::https://travis-ci.org/ebesson/ansible-role-monitoror.svg?branch=master[]
+
+An Ansible Role that installs https://monitoror.com/[monitoror] : an unified monitoring wallboard.
+
+## Requirements
+None.
+
+## Role Variables
+Available variables are listed below, along with default values (see `defaults/main.yml`).
+
+
+## Dependencies
+None.
+
+## Example Playbook
+
+[source,yaml]
+----
+include::molecule/default/playbook.yml[]
+----
+
+## License
+Apache 2
