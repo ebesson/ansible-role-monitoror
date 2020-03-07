@@ -1,0 +1,9 @@
+---
+- name: install | download monitoror binary
+  get_url:
+    url: "{{ monitoror_download_url_base }}/{{ monitoror_version }}/{{ monitoror_binary_map[ansible_facts.architecture] }}-{{ monitoror_version }}"
+    dest: /usr/local/bin/monitoror
+    validate_certs: yes
+    owner: root
+    group: root
+    mode: 755

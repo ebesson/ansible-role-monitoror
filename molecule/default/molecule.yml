@@ -1,0 +1,24 @@
+---
+dependency:
+  name: galaxy
+  enabled: False
+driver:
+  name: docker
+lint:
+  name: yamllint
+platforms:
+  - name: monitoror-host0
+    groups:
+      - all
+provisioner:
+  name: ansible
+  lint:
+    name: ansible-lint
+scenario:
+  name: default
+verifier:
+  name: testinfra
+  options:
+    junit-xml: report.xml
+  lint:
+    name: flake8

@@ -1,0 +1,27 @@
+---
+dependencies: []
+galaxy_info:
+  author: ebesson
+  role_name: monitoror
+  description: Monitoror - Unified monitoring wallboard (https://monitoror.com/)
+  company:
+  license: "Apache 2"
+  min_ansible_version: 2.4
+  platforms:
+    - name: EL
+      versions:
+        - 7
+    - name: Debian
+      versions:
+        - stretch
+        - buster
+    - name: Ubuntu
+      versions:
+        - xenial
+        - bionic
+  galaxy_tags:
+    - system
+    - monitoring
+    - arm
+    - raspberry
+    - pi

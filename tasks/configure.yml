@@ -1,0 +1,12 @@
+---
+- name: configure | deploy systemd configuration
+  template:
+    src: "monitoror.service.j2"
+    dest: /etc/systemd/system/monitoror.service
+    owner: root
+    group: root
+    mode: 0644
+  notify: "restart monitoror"
+
+- name: configure | flush_handlers
+  meta: flush_handlers

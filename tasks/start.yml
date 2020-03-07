@@ -1,0 +1,6 @@
+---
+- name: start | ensure monitoror is up and running
+  service:
+    name: monitoror
+    state: started
+    enabled: yes

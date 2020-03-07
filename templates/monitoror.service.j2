@@ -1,0 +1,17 @@
+# {{ ansible_managed }}
+[Unit]
+Description=Monitoror - unified monitoring wallboard
+Documentation=https://monitoror.com/
+After=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/monitoror
+KillMode=process
+Delegate=yes
+TimeoutStartSec=0
+Restart=always
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target

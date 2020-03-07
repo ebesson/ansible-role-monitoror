@@ -1,0 +1,28 @@
+---
+sudo: required
+dist: xenial
+language: python
+cache:
+  pip: true
+services:
+  - docker
+env:
+  global:
+    - ROLE_NAME: monitoror
+  matrix:
+    - FOOTLOOSE_IMAGE: quay.io/footloose/centos7
+before_install:
+  - curl -Lo footloose https://github.com/weaveworks/footloose/releases/download/0.6.2/footloose-0.6.2-linux-x86_64
+  - chmod +x footloose
+  - sudo mv footloose /usr/local/bin/
+install:
+  - sudo pip install -U tox
+before_script:
+  # Use actual Ansible Galaxy role name for the project directory.
+  - cd ../
+  - mv ansible-role-$ROLE_NAME ebesson.$ROLE_NAME
+  - cd ebesson.$ROLE_NAME
+script:
+  - tox -e ci
+notifications:
+  webhooks: https://galaxy.ansible.com/api/v1/notifications/

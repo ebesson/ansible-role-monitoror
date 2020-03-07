@@ -1,0 +1,13 @@
+---
+cluster:
+  name: monitoror
+  privateKey: cluster-key
+machines:
+- count: 1
+  spec:
+    backend: docker
+    image: {{ footloose_image }}
+    name: host%d
+    privileged: true
+    portMappings:
+    - containerPort: 22

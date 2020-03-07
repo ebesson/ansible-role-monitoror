@@ -1,0 +1,5 @@
+---
+- name: stop | ensure monitoror is up and running
+  service:
+    name: monitoror
+    state: stopped

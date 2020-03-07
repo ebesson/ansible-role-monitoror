@@ -1,0 +1,7 @@
+---
+monitoror_state: present
+monitoror_version: 3.0.0
+monitoror_download_url_base: "https://github.com/monitoror/monitoror/releases/download/"
+monitoror_binary_map:
+  x86_64: "monitoror-linux-amd64"
+  arm: "monitoror-linux-arm"
