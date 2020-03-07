@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.cache
+.molecule
+report.xml
+*.retry
+.vscode
+cluster-key*
+footloose.yaml
+.tox/
