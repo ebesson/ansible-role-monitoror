@@ -5,3 +5,6 @@ monitoror_download_url_base: "https://github.com/monitoror/monitoror/releases/do
 monitoror_binary_map:
   x86_64: "monitoror-linux-amd64"
   arm: "monitoror-linux-arm"
+monitoror_group: monitoror
+monitoror_user: monitoror
+monitoror_user_home_directory: /etc/monitoror

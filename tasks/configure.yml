@@ -1,4 +1,17 @@
 ---
+- name: configure | ensure {{ monitoror_group }} group exists
+  group:
+    name: "{{ monitoror_group }}"
+    state: present
+
+- name: install | ensure {{ monitoror_user }} user exists
+  user:
+    name: "{{ monitoror_user }}"
+    state: present
+    system: yes
+    home: "{{ monitoror_user_home_directory }}"
+    shell: /bin/false
+    createhome: yes
 - name: configure | deploy systemd configuration
   template:
     src: "monitoror.service.j2"
