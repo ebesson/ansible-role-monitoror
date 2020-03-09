@@ -1,9 +1,10 @@
 ---
-- name: configure | set cap_net_raw=+ep on monitoror
+- name: configure | add capability cap_net_raw=+ep on monitoror binary
   capabilities:
     path: /usr/local/bin/monitoror
     capability: cap_net_raw=+ep
     state: present
+  changed_when: no
 
 - name: configure | ensure {{ monitoror_group }} group exists
   group:
