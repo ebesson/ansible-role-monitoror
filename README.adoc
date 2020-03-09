@@ -1,7 +1,7 @@
 # Ansible Role: monitoror
 
 [#img-build-status]
-[link=https://github.com/ebesson/ansible-role-monitoror]
+[link=https://travis-ci.org/ebesson/ansible-role-monitoror]
 image::https://travis-ci.org/ebesson/ansible-role-monitoror.svg?branch=master[]
 
 An Ansible Role that installs https://monitoror.com/[monitoror] : an unified monitoring wallboard.
