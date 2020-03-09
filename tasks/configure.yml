@@ -1,4 +1,10 @@
 ---
+- name: configure | set cap_net_raw=+ep on monitoror
+  capabilities:
+    path: /usr/local/bin/monitoror
+    capability: cap_net_raw=+ep
+    state: present
+
 - name: configure | ensure {{ monitoror_group }} group exists
   group:
     name: "{{ monitoror_group }}"
@@ -12,6 +18,7 @@
     home: "{{ monitoror_user_home_directory }}"
     shell: /bin/false
     createhome: yes
+
 - name: configure | deploy systemd configuration
   template:
     src: "monitoror.service.j2"
